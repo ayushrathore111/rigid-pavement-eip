@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDRC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>DG FOUNDATION DESIGN</h1>
+        <form id="predictor-form" action='/predict' method="POST">
+            <div class="form-group">
+                <label for="project">PROJECT:</label>
+                <input type="text" id="project" name="project" required>
+            </div><div class="form-group">
+                <label for="tit">TITLE:</label>
+                <input type="text" id="tit" name="tit" required>
+            </div><div class="form-group">
+                <label for="doc">DOCUMENT NO:</label>
+                <input type="text" id="doc" name="doc" required>
+            </div><div class="form-group">
+                <label for="rev">REVISION:</label>
+                <input type="text" id="rev" name="rev" required>
+            </div><div class="form-group">
+                <label for="des">DESIGNED BY:</label>
+                <input type="text" id="des" name="des" required>
+            </div><div class="form-group">
+                <label for="chk">CHECKED BY:</label>
+                <input type="text" id="chk" name="chk" required>
+            </div><div class="form-group">
+                <label for="app">APPROVED BY:</label>
+                <input type="text" id="app" name="app" required>
+            </div>
+            <div class="form-group">
+                <label for="veh">No of Commercial Vehicels per day (CVPD):</label>
+                <input type="text" id="veh" name="veh" required>
+            </div>
+            <div class="form-group">
+                <label for="load">Total Wheel load for Trailer (Tonne) :</label>
+                <input type="text" id="load" name="load" required>
+            </div>
+            <div class="form-group">
+                <label for="cbr">California Bearing Ratio:</label>
+                <input type="text" id="cbr" name="cbr" required>
+            </div>
+            <div class="form-group">
+                <label for="k">Modulus of Subgrade Reaction, k (Mpa/m):</label>
+                <input type="text" id="k" name="k" required>
+            </div>
+            <div class="form-group">
+                <label for="e">Elastic Modulus of Concrete, E (Mpa):</label>
+                <input type="text" id="e" name="e" required>
+            </div>
+            <div class="form-group">
+                <label for="mu">Poisson Ratio of the concrete, μ:</label>
+                <input type="text" id="mu" name="mu" required>
+            </div>
+            <div class="form-group">
+                <label for="cs">Compressive Strength of Concrete:</label>
+                <input type="text" id="cs" name="cs" required>
+            </div>
+            <div class="form-group">
+                <label for="rup">Modulus of Rupture of Concrete:</label>
+                <input type="text" id="rup" name="rup" required>
+            </div>
+            <div class="form-group">
+                <label for="axle">Tyre (1- single/2-Dual):</label>
+                <input type="text" id="axle" name="axle" required>
+            </div>
+            <div class="form-group">
+                <label for="spacing">Spacing of Wheels (mm):</label>
+                <input type="text" id="spacing" name="spacing" required>
+            </div>
+            <div class="form-group">
+                <label for="tyreP">Tyre Pressure (Mpa):</label>
+                <input type="text" id="tyreP" name="tyreP" required>
+            </div>
+            <div class="form-group">
+                <label for="temp">Temperature zone (1 to 6):</label>
+                <input type="text" id="temp" name="temp" required>
+            </div>
+            <div class="form-group">
+                <label for="delta">Temperature differential:</label>
+                <input type="text" id="delta" name="delta" required>
+            </div>
+            <div class="form-group">
+                <label for="alpha">Co-efficient of Thermal Expansion:</label>
+                <input type="text" id="alpha" name="alpha" required>
+            </div>
+            <div class="form-group">
+                <label for="life">Design life (years):</label>
+                <input type="text" id="life" name="life" required>
+            </div>
+            <div class="form-group">
+                <label for="thickness">Trial Thickness of CC pavement (m):</label>
+                <input type="text" id="thickness" name="thickness" required>
+            </div>
+            <div class="form-group">
+                <label for="wbm">Thickness of WBM Layer (mm):</label>
+                <input type="text" id="wbm" name="wbm" required>
+            </div>
+            <div class="form-group">
+                <label for="gsb">Thickness of GSB Layer (mm):</label>
+                <input type="text" id="gsb" name="gsb" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+    </div>
+    <footer>
+        <p>LNT INTERNAL USE</p>
+    </footer>
+</body>
+</html>
