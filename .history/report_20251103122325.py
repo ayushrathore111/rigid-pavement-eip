@@ -195,7 +195,7 @@ def create_report(data: dict) -> BytesIO:
         Paragraph(f'{a:.2f} mm', styleN)],
         [Paragraph('Radius of relative stiffness(l) ',styles['Label']), Image(relative_stiffness, width=160, height=50)],
         [Paragraph(' ',styles['Label']), Paragraph('=', styleN),
-        Paragraph(f'{l:.4f} m', styleN)],
+        Paragraph(f'{l:.4f} m', styleN),'', Paragraph('(as per data given )', styleN)],
         [Paragraph('Wheel stress developed at edge(σ) ',styles['Label']), Image(stress_img, width=250, height=50)],
         [Paragraph('',styles['Label']), Paragraph('=', styleN),
         Paragraph(f'{sig:.4f}Mpa', styleN)],
