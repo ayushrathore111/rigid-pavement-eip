@@ -1,0 +1,165 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: #a7b7d2;
+    box-sizing: border-box;
+}
+
+
+/* Main container */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* Form layout: full width, 3 inputs per row */
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    background: #a7b7d2;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+
+/* Each label-input combo */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* 3 per row */
+    min-width: 250px;
+    position: relative;
+    /* for tooltip positioning */
+}
+
+
+/* Labels */
+
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+/* Inputs and selects */
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+
+/* Submit button */
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Hover image (tooltip chart/table display) */
+
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    margin-top: 0.5rem;
+    width: 350px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+}
+
+
+/* When hovering over label */
+
+.form-group:hover .hover-image {
+    display: block;
+}
+
+
+/* Close button for hover image */
+
+.close-btn {
+    display: block;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    margin-left: auto;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+    background: #d63030;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1100px) {
+    .form-group {
+        width: 45%;
+        /* two per row */
+    }
+}
+
+@media (max-width: 700px) {
+    .form-group {
+        width: 100%;
+        /* one per row */
+    }
+}
